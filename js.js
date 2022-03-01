@@ -18,6 +18,21 @@ function perimetroTriangulo(base, altura){
     return base * altura / 2;
 }
 
+//altura de un triangulo isoceles
+function alturaTriangulo(lado1, lado2, lado3){
+    if (lado1 == lado2){
+        return Math.sqrt(Math.pow(lado1, 2)-(Math.pow(lado3, 2)/4));
+    }
+    else if(lado2 == lado3){
+        return Math.sqrt(Math.pow(lado2, 2)-(Math.pow(lado1, 2)/4));
+    }
+    else if (lado3 == lado1){
+        return Math.sqrt(Math.pow(lado3, 2)-(Math.pow(lado2, 2)/4));
+    }
+    else{
+        alert("pudrete!! sabes q eso no es un isoceles");}
+}
+
 //perimetro del circulo
 function perimetroCirculo(radio){
     return 2 * Math.PI * radio;
