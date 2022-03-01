@@ -28,4 +28,16 @@ function areaCirculo(radio){
     return Math.PI * Math.pow(radio, 2); 
 }
 
-console.log(areaCirculo(4));
+// Interactuando con HTML
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("lado_input");
+    const value = input.value;
+    const perimetro = perimetroCuadrado(value);
+    alert("YEAH!! " + perimetro);
+}
+function calcularAreaCuadrado(){
+    const input = document.getElementById("lado_input");
+    const value = input.value;
+    const area = areaCuadrado(value);
+    alert(area);
+}
