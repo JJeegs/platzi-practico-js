@@ -3,6 +3,9 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+html{
+    background-image:url(https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-zoom-virtual-background-_Tcjok-d9b4.jpg);
+}
 body{
     color: rgb(20, 4, 1);
     margin: 60px;
@@ -14,7 +17,7 @@ main{
 }
 .container{
     margin-top: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.452);
     border-radius: 15px;
     height: 350px;
     width: 380px;
@@ -23,7 +26,16 @@ main{
 }
 input{
     width: calc(100% - 40px);
+    padding: 3px;
     margin: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.452);
+    transition: transform 200ms;
+}
+input:focus{
+    transform: scale(1.07);
+    transition: transform 400ms;
 }
 .buttons-container{
     display: flex;
@@ -35,4 +47,14 @@ button{
     background-color: rgb(216, 216, 216);
     border: 1px solid rgb(143, 143, 143);
     padding: 10px;
+    transition: transform 200ms;
+}
+button:hover{
+    background-color: rgb(185, 185, 185);
+    transform: scale(1.05);
+    transition: transform 400ms;
+}
+button:active{
+    transform: scale(0.9);
+    transition: transform 50ms;
 }

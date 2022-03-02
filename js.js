@@ -48,39 +48,52 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("lado_input");
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
-    alert("YEAH!! " + perimetro.toFixed(2) + "cm");
+    if (value != ''){
+        alert("YEAH!! " + perimetro.toFixed(2) + "cm");
+    }
 }
 function calcularAreaCuadrado(){
     const input = document.getElementById("lado_input");
     const value = input.value;
     const area = areaCuadrado(value);
-    alert("YEAH!!" + area.toFixed(2) + "cm");
+    if (value != ''){
+        alert("YEAH!!" + area.toFixed(2) + "cm");
+    }
 }
 function calcularPerimetroTriangulo(){
     const lados_input = document.getElementById("lados");
-    const lados = lados_input.value;
+    const lados = parseInt(lados_input.value);
     const base_input = document.getElementById("base");
-    const base = base_input.value;
+    const base = parseInt(base_input.value);
     const perimetro = perimetroTriangulo(lados, base);
-    alert("YEAH!! " + perimetro.toFixed(2) + "cm");
+    if (lados != '' && base != ''){
+        alert("YEAH!! " + perimetro + "cm");
+    }
 }
 function calcularAreaTriangulo(){
     const lados_input = document.getElementById("lados");
     const lados = lados_input.value;
     const base_input = document.getElementById("base");
     const base = base_input.value;
-    const area = areaTriangulo(base, alturaTriangulo(lados, lados, base));
-    alert("YEAH!! " + area.toFixed(2) + "cm");
+    const altura = alturaTriangulo(lados, lados, base)
+    const area = areaTriangulo(base, altura);
+    if (lados != '' && base != ''){
+        alert("YEAH!! " + area.toFixed(2) + "cm");
+    }
 }
 function calcularPerimetroCirculo(){
     const radio_input = document.getElementById("radio");
     const radio = radio_input.value;
     const perimetro = perimetroCirculo(radio);
-    alert("YEAH!! " + perimetro.toFixed(2) + "cm");
+    if (radio != ''){
+        alert("YEAH!! " + perimetro.toFixed(2) + "cm");
+    }
 }
 function calcularAreaCirculo(){
     const radio_input = document.getElementById("radio");
     const radio = radio_input.value;
     const area = areaCirculo(radio);
-    alert("YEAH!! " + area.toFixed(2) + "cm");
+    if (radio != ''){
+        alert("YEAH!! " + area.toFixed(2) + "cm");
+    }
 }
